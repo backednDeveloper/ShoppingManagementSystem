@@ -19,7 +19,7 @@ public class Order {
     @Column(name = "id")
     private Long id;
     @Column(name = "order_status")
-    private int status;
+    private boolean status;
     @Pattern(regexp = "[A-Za-z0-9]+")
     @Column(name = "order_weight", nullable = false, length = 25)
     private Double weight;

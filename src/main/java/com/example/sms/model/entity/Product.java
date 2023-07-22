@@ -18,6 +18,8 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+    @Column(name = "product_status")
+    private boolean status;
 
     @Pattern(regexp = "[A-Za-z0-9]+")
     @Column(name = "name", nullable = false, length = 50)

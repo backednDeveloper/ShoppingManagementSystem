@@ -24,7 +24,7 @@ public class Customer {
     @Column(name = "customer_age", nullable = false, length = 2)
     private int age;
     @Column(name = "customer_status")
-    private int status;
+    private boolean status;
     @Pattern(regexp = "[A-Za-z]+")
     @Column(name = "customer_name", nullable = false, length = 25)
     private String name;
