@@ -37,7 +37,4 @@ public class Product {
     @Column(name = "quantity",nullable = false)
     private Long quantity;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "name")
-    private String customerName;
 }
