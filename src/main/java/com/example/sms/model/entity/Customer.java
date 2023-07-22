@@ -13,12 +13,12 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
+@Table(name = "Customer")
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private long id;
-
+    private Long id;
     @Pattern(regexp = "\\d+")
     @Min(value = 18, message = "Your age must be over 18")
     @Column(name = "customer_age", nullable = false, length = 2)
@@ -42,5 +42,7 @@ public class Customer {
     private String email;
     @Column(name = "customer_registration_date")
     private LocalDateTime registrationDate;
+    @Column(name = "customer_api")
+    private Long lastLoginApi;
 
 }
