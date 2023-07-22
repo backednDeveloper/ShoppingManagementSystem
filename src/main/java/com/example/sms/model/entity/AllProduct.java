@@ -3,6 +3,8 @@ package com.example.sms.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @ToString
@@ -16,6 +18,9 @@ public class AllProduct {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
+    @OneToMany(targetEntity = Product.class)
+    private List<Product> products;
 
     //katagoy classi
     //hemcinin productlardan random olaraq produckt qoyulmalidir
