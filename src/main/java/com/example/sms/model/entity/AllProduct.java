@@ -19,8 +19,6 @@ public class AllProduct {
     @Column(name = "id")
     private Long id;
 
-    @OneToMany(targetEntity = Product.class)
-    private List<Product> products;
 
     //katagoy classi
     //hemcinin productlardan random olaraq produckt qoyulmalidir

@@ -39,5 +39,7 @@ public class Product {
     @Pattern(regexp = "\\d+")
     @Column(name = "quantity", nullable = false)
     private Long quantity;
+    @ManyToOne(targetEntity = AllProduct.class)
+    private AllProduct allProduct;
 
 }
